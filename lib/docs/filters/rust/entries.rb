@@ -9,7 +9,7 @@ module Docs
         elsif slug == 'error-index'
           'Compiler Errors'
         else
-          name = at_css('main h1').content.remove(/\A.+\s/).remove('⎘')
+          name = at_css('main h1').content.remove(/\A.+\s/).remove('⎘').remove('Copy item path')
           mod = slug.split('/').first
           name.prepend("#{mod}::") unless name.start_with?(mod)
           name
